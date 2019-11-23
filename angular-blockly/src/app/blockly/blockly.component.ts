@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as Blockly from 'blockly';
+import * as Ja from 'blockly/msg/ja';
+import '../blocks/TurtleBlock';
 
 @Component({
   selector: 'app-blockly',
@@ -11,16 +13,18 @@ export class BlocklyComponent implements OnInit {
   ngOnInit() {
     const blocklyDiv = document.getElementById('blocklyDiv');
 
+    Blockly.setLocale(Ja);
     Blockly.inject(blocklyDiv, {
-      readOnly: false,
-      move: {
-        scrollbars: true,
-        drag: true,
-        wheel: true,
+      grid: {
+        spacing: 20,
+        length: 3
       },
       toolbox: `
         <xml>
-          <block type="controls_ifelse"></block>
+          <block type="controls_repeat"></block>
+          <block type="moveForward"></block>
+          <block type="turnRight"></block>
+          <block type="turnLeft"></block>
         </xml>
       `
     } as Blockly.BlocklyOptions);
