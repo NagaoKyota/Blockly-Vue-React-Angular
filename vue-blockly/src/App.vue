@@ -12,6 +12,7 @@
 <script>
 import BlocklyComponent from './components/BlocklyComponent.vue'
 import BlocklyJS from 'blockly/javascript';
+import './blocks/TurtleBlock';
 
 export default {
   name: 'app',
@@ -28,11 +29,10 @@ export default {
         },
         toolbox: `
           <xml>
-            <block type="controls_if"></block>
-            <block type="logic_compare"></block>
-            <block type="logic_operation"></block>
-            <block type="logic_negate"></block>
-            <block type="logic_boolean"></block>
+            <block type="controls_repeat"></block>
+            <block type="moveForward"></block>
+            <block type="turnRight"></block>
+            <block type="turnLeft"></block>
           </xml>
         `
       }
