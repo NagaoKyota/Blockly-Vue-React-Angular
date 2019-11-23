@@ -3,7 +3,7 @@
     <blocklyComponent id="blockly" :options="options" ref="blockly">
     </blocklyComponent>
     <p id="code">
-      <button v-on:click="showCode()">Show JavaScript</button>
+      上で組んだブロックのコードが以下に出力されます
       <pre v-html="code"></pre>
     </p>
   </div>
@@ -11,7 +11,6 @@
 
 <script>
 import BlocklyComponent from './components/BlocklyComponent.vue'
-import BlocklyJS from 'blockly/javascript';
 import './blocks/TurtleBlock';
 
 export default {
@@ -38,11 +37,6 @@ export default {
       }
     }
   },
-  methods: {
-    showCode() {
-      this.code = BlocklyJS.workspaceToCode(this.$refs['blockly'].workspace);
-    }
-  }
 }
 </script>
 
