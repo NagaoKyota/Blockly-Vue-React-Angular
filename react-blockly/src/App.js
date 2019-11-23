@@ -1,5 +1,6 @@
 import React from 'react';
 import 'blockly';
+import './blocks/TurtleBlock';
 import './App.css';
 
 import BlocklyComponent, { Block } from './components';
@@ -13,13 +14,13 @@ class App extends React.Component {
           length: 3
         }} initialXml={`
           <xml>
-            <block type="controls_ifelse" x="0" y="0"></block>
+            <block type="controls_repeat"></block>
           </xml>
         `}>
-          <Block type="controls_ifelse" />
-          <Block type="logic_compare" />
-          <Block type="logic_operation" />
           <Block type="controls_repeat" />
+          <Block type="moveForward" />
+          <Block type="turnRight" />
+          <Block type="turnLeft" />
         </BlocklyComponent>
       </div>
     );
