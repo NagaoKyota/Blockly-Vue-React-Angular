@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BlocklyComponent } from './components/blockly/blockly.component';
+import { CodeComponent } from './components/code/code.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BlocklyComponent
+    BlocklyComponent,
+    CodeComponent
   ],
   imports: [
     BrowserModule

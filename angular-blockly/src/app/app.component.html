@@ -1,3 +1,4 @@
 <div>
-  <app-blockly></app-blockly>
+  <app-blockly (code)="setCode($event)"></app-blockly>
+  <app-code [code]='code'></app-code>
 </div>

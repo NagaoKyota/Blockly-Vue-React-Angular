@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-blockly';
+  public code: string;
+
+  setCode(code) {
+    this.code = code;
+  }
 }
