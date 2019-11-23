@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { BlocklyComponent } from './blockly/blockly.component';
+import { BlocklyComponent } from './components/blockly/blockly.component';
 
 @NgModule({
   declarations: [

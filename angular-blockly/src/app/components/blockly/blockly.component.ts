@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as Blockly from 'blockly';
 import * as Ja from 'blockly/msg/ja';
-import '../blocks/TurtleBlock';
+import '../../blocks/TurtleBlock';
 
 @Component({
   selector: 'app-blockly',
