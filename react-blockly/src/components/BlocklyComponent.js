@@ -1,11 +1,18 @@
 import React from 'react';
 import Blockly from 'blockly/core';
+import BlocklyJS from 'blockly/javascript';
 import './BlocklyComponent.css';
 
 import ja from 'blockly/msg/ja';
 Blockly.setLocale(ja);
 
 export default class BlocklyComponent extends React.Component {
+  onChangeHandler = (event) => {
+    if (event.type === Blockly.Events.MOVE) {
+      this.props.setCode(BlocklyJS.workspaceToCode(this.workspace));
+    }
+  }
+
   componentDidMount() {
     const { initialXml, children, ...rest } = this.props;
     this.workspace = Blockly.inject(
@@ -19,6 +26,7 @@ export default class BlocklyComponent extends React.Component {
     if (initialXml) {
       Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(initialXml), this.workspace);
     }
+    this.workspace.addChangeListener(this.onChangeHandler);
   }
 
   render() {
