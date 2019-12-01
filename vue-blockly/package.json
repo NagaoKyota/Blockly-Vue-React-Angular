@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "blockly": "3.20191014.4",
-    "core-js": "3.4.1",
+    "core-js": "3.4.5",
     "vue": "2.6.10"
   },
   "devDependencies": {
@@ -17,7 +17,7 @@
     "@vue/cli-plugin-eslint": "4.0.5",
     "@vue/cli-service": "4.0.5",
     "babel-eslint": "10.0.3",
-    "eslint": "5.16.0",
+    "eslint": "6.7.2",
     "eslint-plugin-vue": "5.2.3",
     "vue-template-compiler": "2.6.10"
   },
