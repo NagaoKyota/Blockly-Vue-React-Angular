@@ -19,6 +19,7 @@ export default class BlocklyComponent extends React.Component {
       this.blocklyDiv,
       {
         toolbox: this.toolbox,
+        renderer: 'zelos',
         ...rest
       },
     );
